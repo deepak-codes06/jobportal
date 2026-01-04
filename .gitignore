@@ -1,0 +1,12 @@
+# Ignore application properties
+src/main/resources/application.properties
+
+# Ignore target folder
+target/
+
+# Ignore IDE files
+.idea/
+*.iml
+
+# Ignore logs
+*.log
