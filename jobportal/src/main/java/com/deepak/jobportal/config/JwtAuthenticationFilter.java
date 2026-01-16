@@ -15,7 +15,6 @@ import org.springframework.web.bind.UnsatisfiedServletRequestParameterException;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
-import java.util.Collections;
 
 @Component
 public class JwtAuthenticationFilter extends OncePerRequestFilter {

@@ -21,12 +21,19 @@ public class JwtAuthEntryPoint implements AuthenticationEntryPoint {
         response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
         response.setContentType("application/json");
 
+        String message = "Unauthorized";
+
+        if(request.getHeader("Authorization") == null){
+            message = " JWT token is missing";
+        }
+
         response.getWriter().write("""
                 {
-                "message" : "Invalid email or password"
+                "error" : "Unauthorized",
+                "message" : "%s"
                 }
-                """);
-
+                """.formatted(message)
+        );
 
 
     }

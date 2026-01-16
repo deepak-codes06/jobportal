@@ -28,6 +28,9 @@ public class JobApplication {
 
     private String status;  //Applied , shortlisted , rejected
 
+    @Column(name = "resume_path")
+    private String resumePath;
+
 
     private LocalDate appliedDate = LocalDate.now();
 }
